@@ -6,60 +6,156 @@
     <title>ELKAMAL Mohammed</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @keyframes slideIn {
+            from {
+                filter: blur(4px);
+                transform: translateY(90%);
+            }
+            to {
+                filter: blur(0);
+                transform: translateY(0);
+            }
+        }
+        .animate-slide-in-1s {
+            animation: slideIn 1s ease-in-out forwards;
+        }
+        .animate-slide-in-2s {
+            animation: slideIn 2s ease-in-out forwards;
+        }
+
+        @keyframes s-w {
+            to {
+                /* transform: translateY(0); */
+            }
+        }
+        .tst{
+            transform: translateY(200%);
+            animation: s-w linear;
+            animation-timeline: scroll();
+        }
+    </style>
 </head>
 <body>
-    <!-- <main class="overflow-x-hidden h-screen"> overflow-y-hidden no-scrollbar style="scroll-snap-type: y mandatory;overflow-y:scroll;" -->
+    <!-- overflow-y-hidden no-scrollbar style="scroll-snap-type: y mandatory;overflow-y:scroll;" -->
+    <main class="bg-black overflow-x-hidden">
+        <!-- <div class=" fixed h-10 w-screen bg-yellow-700"></div> -->
         <!--FIRST PAGE-->
-        <!-- <div id="a" class="bg-black h-screen w-screen"> ------ style="scroll-snap-align: start;" -->
-            <!-- <div class="h-full flex items-center justify-between w-10/12 mx-auto"> -->
-                <!--description + sucial media-->
-                <!-- <div class="flex flex-col justify-between border-white h-4/6 w-5/12"> -->
-                    <!----profile-->
-                    <!----description-->
-                    <!-- <div class="mt-32 flex flex-col  border-white">
-                        <h1 class="text-4xl font-black tracking-tight text-slate-200">ELKAMAL Mohammed</h1>
-                        <h2 class="mt-2 text-lg font-bold tracking-tight text-slate-50">Frontend Engineer</h2>
-                        <p class="mt-8 text-lg text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magnam beatae rem hic consequatur, aspernatur atque pariatur aut recusandae quaerat laborum, voluptatum corporis ab nisi quos tempore excepturi id minus distinctio. Nobis, autem earum. Deleniti incidunt ipsum in accusamus eaque, soluta omnis neque voluptatum velit dolorum quisquam quibusdam dicta aspernatur?</p>
-                    </div> -->
-                    <!---sucial media profiles-->
-                    <!-- <div class="w-3/6 flex justify-between">
-                        <a href="https://x.com/Muhamma84986027" class="border rounded-xl w-12 hover:bg-[#1DA1F2] flex justify-center items-center fa-solid fa-code-merge text-white text-2xl"></a>
-                        <a href="https://www.linkedin.com/in/mohammed-elkamal-b07797199" class="border text-white hover:bg-blue-700 w-12 rounded-xl flex justify-center items-center p-2 fa-brands fa-linkedin-in text-2xl"></a>
-                        <a href="https://www.instagram.com/mo_elkamel/" class="transition-all  duration-150 ease-in-out border text-white hover:bg-gradient-to-r hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] w-12 rounded-xl flex justify-center items-center p-2 fa-brands fa-instagram text-2xl"></a>
-                        <a href="https://github.com/moelkama/" class="border text-white hover:text-black hover:bg-white w-12 rounded-xl flex justify-center items-center p-2 fa-brands fa-github text-2xl"></a>
-                    </div>
+        <div id="a" class="lg:h-screen w-screen"> <!------ style="scroll-snap-align: start;"-->
+            <div class="h-full flex flex-col w-11/12 lg:w-9/12 mx-auto">
+                <div class="w-full h-16 flex justify-end items-center gap-4">
+                    <a href="#a" class="hover:border-b-2 border-slate-600 text-xl text-white">About</a>
+                    <a href="#b" class="hover:border-b-2 border-slate-600 text-xl text-white">Education</a>
+                    <a href="#c" class="hover:border-b-2 border-slate-600 text-xl text-white">Projects</a>
                 </div>
-                <div class="border-2 border-white rounded-3xl h-4/6 w-6/12 flex flex-col justify-evenly px-6"> -->
-                    <!---------how i joined to programming world-->
-                    <!-- <div class="">
-                        <h1 class="text-white">FIRST:</h1>
-                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem non possimus tempore fugiat soluta ex delectus praesentium corrupti quidem cupiditate eaque beatae suscipit consequuntur in dolorem consequatur, omnis fuga a?</p>
+                <div class="lg:h-4/6 flex flex-1 flex-col lg:flex-row items-center justify-between gap-10 lg:w-full ">
+                    <!--description + sucial media-->
+                    <div class="animate-slide-in-1s flex flex-col justify-between border-white w-10/12 gap-10 lg:w-5/12">
+                        <!----profile-->
+                        <!----description-->
+                        <div class="mt-32 flex flex-col  border-white">
+                            <h1 class="text-4xl font-black tracking-tight text-slate-200">ELKAMAL Mohammed</h1>
+                            <h2 class="ml-2 mt-2 text-lg font-bold tracking-tight text-slate-50">Frontend Engineer</h2>
+                            <p class="ml-2 mt-8 text-lg tracking-tight text-slate-50">As a dedicated front-end developer and software engineer, I specialize in creating intuitive and engaging user experiences. I am passionate about staying current with industry trends and best practices. My experience as a 1337 student has strengthened my ability to engage with emerging technologies, allowing me to continuously improve my skills. I strive to deliver high-quality, user-centered solutions that meet evolving needs.</p>
+                        </div>
+                        <!---sucial media profiles-->
+                        <div class="flex gap-4">
+                            <a href="https://x.com/Muhamma84986027" class="border rounded-xl w-12 hover:bg-[#1DA1F2] flex justify-center items-center fa-solid fa-code-merge text-white text-2xl"></a>
+                            <a href="https://www.linkedin.com/in/mohammed-elkamal-b07797199" class="border text-white hover:bg-blue-700 w-12 rounded-xl flex justify-center items-center p-2 fa-brands fa-linkedin-in text-2xl"></a>
+                            <a href="https://www.instagram.com/mo_elkamel/" class="transition delay-1000 duration-300 ease-in-out border text-white hover:bg-gradient-to-r hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] w-12 rounded-xl flex justify-center items-center p-2 fa-brands fa-instagram text-2xl"></a>
+                            <a href="https://github.com/moelkama/" class="border text-white hover:text-black hover:bg-white w-12 rounded-xl flex justify-center items-center p-2 fa-brands fa-github text-2xl"></a>
+                        </div>
                     </div>
-                    <div class="">
-                        <h1 class="text-white">SECEND:</h1>
-                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem non possimus tempore fugiat soluta ex delectus praesentium corrupti quidem cupiditate eaque beatae suscipit consequuntur in dolorem consequatur, omnis fuga a?</p>
-                    </div>
-                    <div class="">
-                        <h1 class="text-white">THIRD:</h1>
-                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem non possimus tempore fugiat soluta ex delectus praesentium corrupti quidem cupiditate eaque beatae suscipit consequuntur in dolorem consequatur, omnis fuga a?</p>
+                    <div class="animate-slide-in-2s border border-slate-600 rounded-3xl w-10/12 lg:w-6/12 flex flex-col justify-evenly p-6">
+                        <!---------how i joined to programming world-->
+                        <div class="">
+                            <h1 class="text-lg font-bold tracking-tight text-slate-50">FIRST</h1>
+                            <p class="mt-2 text-lg font-bold tracking-tight text-slate-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem non possimus tempore fugiat soluta ex delectus praesentium corrupti quidem cupiditate eaque beatae suscipit consequuntur in dolorem consequatur, omnis fuga a?</p>
+                        </div>
+                        <div class="">
+                            <h1 class="text-lg font-bold tracking-tight text-slate-50">SECEND:</h1>
+                            <p class="mt-2 text-lg font-bold tracking-tight text-slate-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem non possimus tempore fugiat soluta ex delectus praesentium corrupti quidem cupiditate eaque beatae suscipit consequuntur in dolorem consequatur, omnis fuga a?</p>
+                        </div>
+                        <div class="">
+                            <h1 class="text-lg font-bold tracking-tight text-slate-50">THIRD:</h1>
+                            <p class="mt-2 text-lg font-bold tracking-tight text-slate-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem non possimus tempore fugiat soluta ex delectus praesentium corrupti quidem cupiditate eaque beatae suscipit consequuntur in dolorem consequatur, omnis fuga a?</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
+
+
+
         <!--SECONDE PAGE-->
+        <div id="b" class="w-screen h-screen  flex justify-center items-center">
+            <div class="animate-slide-in-1s h-5/6 lg:h-4/6 w-full xl:w-[1412px] grid grid-rows-8 fffff grid-cols-5 lg:grid-cols-2 lg:gap-x-10">
+                <!--FIRST ROW-->
+                <div class=" p-4 flex flex-col justify-center items-center row-start-1 col-start-1 col-end-5 lg:col-end-2 row-end-3">
+                    <div class="border rounded-3xl border-slate-400 p-4">
+                        <h1 class="text-2xl font-bold tracking-tight text-slate-100">Bacalaureat</h1>
+                        <h2 class="mt-2 ml-2 text-xl font-bold tracking-tight text-slate-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, mollitia.</h2>
+                    </div>
+                </div>
+                <div class="flex items-center col-start-5 lg:col-start-2 row-start-1 row-end-3">
+                    <div class="flex justify-center items-center">
+                        <div class="bg-slate-200 h-3 w-3 rounded-full"></div>
+                        <h1 class="ml-2 text-lg font-bold tracking-tight text-slate-50">2019</h1>
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col justify-center items-center col-end-6 lg:col-end-2 col-start-2 row-start-3 row-end-5">
+                    <div class="p-4 border rounded-3xl border-slate-400">
+                        <h1 class="text-xl font-bold tracking-tight text-slate-100">Bacalaureat</h1>
+                        <h2 class="mt-2 ml-2 text-lg font-bold tracking-tight text-slate-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, mollitia.</h2>
+                    </div>
+                </div>
+                <div class="flex items-center justify-end col-start-1 row-start-3 row-end-5">
+                    <div class="flex justify-center items-center">
+                        <h1 class="mr-2 text-lg font-bold tracking-tight text-slate-50">2019</h1>
+                        <div class="bg-slate-200 h-3 w-3 rounded-full"></div>
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col justify-center items-center col-end-5 lg:col-end-2 col-start-1 row-start-5 row-end-7">
+                    <div class="p-4 border rounded-3xl border-slate-400 ">
+                        <h1 class="text-xl font-bold tracking-tight text-slate-100">Bacalaureat</h1>
+                        <h2 class="mt-2 ml-2 text-lg font-bold tracking-tight text-slate-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, mollitia.</h2>
+                    </div>
+                </div>
+                <div class="flex items-center col-start-5 lg:col-start-2 row-start-5 row-end-7">
+                    <div class="flex justify-center items-center">
+                        <div class="bg-slate-200 h-3 w-3 rounded-full"></div>
+                        <h1 class="ml-2 text-lg font-bold tracking-tight text-slate-50">2019</h1>
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col justify-center items-center col-end-6 lg:col-end-2 col-start-2 row-start-7 row-end-9">
+                    <div class="border rounded-3xl border-slate-400 p-4">
+                        <h1 class="text-xl font-bold tracking-tight text-slate-100">Bacalaureat</h1>
+                        <h2 class="mt-2 ml-2 text-lg font-bold tracking-tight text-slate-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, mollitia.</h2>
+                    </div>
+                </div>
+                <div class="flex items-center justify-end col-start-1 row-start-7 row-end-9">
+                    <div class="flex justify-center items-center">
+                        <h1 class="mr-2 text-lg font-bold tracking-tight text-slate-50">2019</h1>
+                        <div class="bg-slate-200 h-3 w-3 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <!--THIRD PAGE-->
         <!-- style="scroll-snap-align: start;"-->
-        <!-- <div class="w-screen h-screen flex justify-center items-center bg-black"> -->
+        <div id="c" class="w-screen h-screen flex justify-center items-center ">
             <!--projects-->
-            <!-- <div class="h-5/6 z-10 w-10/12 grid grid-cols-2 gap-10"> -->
+            <div class="h-4/6 z-10 w-10/12 grid xl:grid-cols-2 gap-10">
                 <!-- -project 1 -->
-                <!-- <a href="https://github.com/Abdeladim-Fadlane/42cursus-ft_transcendence" class="bg-gradient-to-r from-[#111629] to-[#1c1b46] hover:from-[#2f3859] hover:to-[#39386f] rounded-xl flex flex-col"> -->
-                    <!--#a8ff78 ->#78ffd6-->
-                    <!--#1f4037 ->#99f2c8-->
-                    <!-- <div class="h-5/6 w-11/12 m-auto flex flex-col justify-between">
-                        <h1 class="text-2xl font-black tracking-tight text-slate-200">Ft_transcendence</h1>
-                        <h1 class="mt-2 text-lg font-bold tracking-tight text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis odio magni quasi. Sint consectetur eligendi suscipit quaerat placeat! Labore perferendis placeat delectus qui vero.</h1> -->
+                <a href="https://github.com/Abdeladim-Fadlane/42cursus-ft_transcendence" class="bg-gradient-to-r from-[#111629] to-[#1c1b46] hover:from-[#2f3859] hover:to-[#39386f] rounded-xl flex flex-col">
+                    <div class="h-5/6 w-11/12 m-auto flex flex-col justify-between">
+                        <h1 class="text-2xl font-black tracking-tight text-slate-200">FT_transcendence</h1>
+                        <h1 class="mt-2 text-lg font-bold tracking-tight text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis odio magni quasi. Sint consectetur eligendi suscipit quaerat placeat! Labore perferendis placeat delectus qui vero.</h1>
                         <!--tools-->
-                        <!-- <div class="mx-auto  w-4/6 flex justify-evenly items-center">
+                        <div class="mx-auto  w-4/6 flex justify-evenly items-center">
                             <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
                                 <path fill="#2395ec" d="M47.527,19.847c-0.13-0.102-1.345-1.007-3.908-1.007c-0.677,0.003-1.352,0.06-2.019,0.171 c-0.496-3.354-3.219-4.93-3.345-5.003l-0.688-0.392l-0.453,0.644c-0.567,0.866-1.068,1.76-1.311,2.763 c-0.459,1.915-0.18,3.713,0.806,5.25C35.417,22.928,33.386,22.986,33,23H1.582c-0.826,0.001-1.496,0.66-1.501,1.474 c-0.037,2.733,0.353,5.553,1.306,8.119c1.089,2.818,2.71,4.894,4.818,6.164C8.567,40.184,12.405,41,16.756,41 c1.965,0.006,3.927-0.169,5.859-0.524c2.686-0.487,5.271-1.413,7.647-2.74c1.958-1.119,3.72-2.542,5.219-4.215 c2.505-2.798,3.997-5.913,5.107-8.682c0.149,0,0.298,0,0.442,0c2.743,0,4.429-1.083,5.359-1.99 c0.618-0.579,1.101-1.284,1.414-2.065L48,20.216L47.527,19.847z"></path><path fill="#2395ec" d="M8,22H5c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C9,21.552,8.552,22,8,22z"></path><path fill="#2395ec" d="M14,22h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C15,21.552,14.552,22,14,22z"></path><path fill="#2395ec" d="M20,22h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C21,21.552,20.552,22,20,22z"></path><path fill="#2395ec" d="M26,22h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C27,21.552,26.552,22,26,22z"></path><path fill="#2395ec" d="M14,16h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C15,15.552,14.552,16,14,16z"></path><path fill="#2395ec" d="M20,16h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C21,15.552,20.552,16,20,16z"></path><path fill="#2395ec" d="M26,16h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C27,15.552,26.552,16,26,16z"></path><path fill="#2395ec" d="M26,10h-3c-0.552,0-1-0.448-1-1V6c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C27,9.552,26.552,10,26,10z"></path><path fill="#2395ec" d="M32,22h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C33,21.552,32.552,22,32,22z"></path>
                             </svg>
@@ -83,14 +179,14 @@
                             </svg>
                         </div>
                     </div>
-                </a> -->
+                </a>
                 <!---project 2-->
-                <!-- <a href="https://github.com/moelkama/inception" class="bg-gradient-to-r from-[#111629] to-[#1c1b46] hover:from-[#2f3859] hover:to-[#39386f] rounded-xl flex flex-col">
+                <a href="https://github.com/moelkama/inception" class="bg-gradient-to-r from-[#111629] to-[#1c1b46] hover:from-[#2f3859] hover:to-[#39386f] rounded-xl flex flex-col">
                     <div class="h-5/6 w-11/12 m-auto flex flex-col justify-between">
                         <h1 class="text-2xl font-black tracking-tight text-slate-200">INCEPTION</h1>
-                        <h1 class="mt-2 text-lg font-bold tracking-tight text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis odio magni quasi. Sint consectetur eligendi suscipit quaerat placeat! Labore perferendis placeat delectus qui vero.</h1> -->
+                        <h1 class="mt-2 text-lg font-bold tracking-tight text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis odio magni quasi. Sint consectetur eligendi suscipit quaerat placeat! Labore perferendis placeat delectus qui vero.</h1>
                         <!--tools-->
-                        <!-- <div class="mx-auto  w-3/6 flex justify-evenly items-center">
+                        <div class="mx-auto  w-3/6 flex justify-evenly items-center">
                             <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
                                 <path fill="#2395ec" d="M47.527,19.847c-0.13-0.102-1.345-1.007-3.908-1.007c-0.677,0.003-1.352,0.06-2.019,0.171 c-0.496-3.354-3.219-4.93-3.345-5.003l-0.688-0.392l-0.453,0.644c-0.567,0.866-1.068,1.76-1.311,2.763 c-0.459,1.915-0.18,3.713,0.806,5.25C35.417,22.928,33.386,22.986,33,23H1.582c-0.826,0.001-1.496,0.66-1.501,1.474 c-0.037,2.733,0.353,5.553,1.306,8.119c1.089,2.818,2.71,4.894,4.818,6.164C8.567,40.184,12.405,41,16.756,41 c1.965,0.006,3.927-0.169,5.859-0.524c2.686-0.487,5.271-1.413,7.647-2.74c1.958-1.119,3.72-2.542,5.219-4.215 c2.505-2.798,3.997-5.913,5.107-8.682c0.149,0,0.298,0,0.442,0c2.743,0,4.429-1.083,5.359-1.99 c0.618-0.579,1.101-1.284,1.414-2.065L48,20.216L47.527,19.847z"></path><path fill="#2395ec" d="M8,22H5c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C9,21.552,8.552,22,8,22z"></path><path fill="#2395ec" d="M14,22h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C15,21.552,14.552,22,14,22z"></path><path fill="#2395ec" d="M20,22h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C21,21.552,20.552,22,20,22z"></path><path fill="#2395ec" d="M26,22h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C27,21.552,26.552,22,26,22z"></path><path fill="#2395ec" d="M14,16h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C15,15.552,14.552,16,14,16z"></path><path fill="#2395ec" d="M20,16h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C21,15.552,20.552,16,20,16z"></path><path fill="#2395ec" d="M26,16h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C27,15.552,26.552,16,26,16z"></path><path fill="#2395ec" d="M26,10h-3c-0.552,0-1-0.448-1-1V6c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C27,9.552,26.552,10,26,10z"></path><path fill="#2395ec" d="M32,22h-3c-0.552,0-1-0.448-1-1v-3c0-0.552,0.448-1,1-1h3c0.552,0,1,0.448,1,1v3 C33,21.552,32.552,22,32,22z"></path>
                             </svg>
@@ -112,9 +208,9 @@
                 <a href="https://github.com/moelkama/inception" class="bg-gradient-to-r from-[#111629] to-[#1c1b46] hover:from-[#2f3859] hover:to-[#39386f] rounded-xl flex flex-col">
                     <div class="h-5/6 w-11/12 m-auto flex flex-col justify-between">
                         <h1 class="text-2xl font-black tracking-tight text-slate-200">Web Server</h1>
-                        <h1 class="mt-2 text-lg font-bold tracking-tight text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis odio magni quasi. Sint consectetur eligendi suscipit quaerat placeat! Labore perferendis placeat delectus qui vero.</h1> -->
+                        <h1 class="mt-2 text-lg font-bold tracking-tight text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis odio magni quasi. Sint consectetur eligendi suscipit quaerat placeat! Labore perferendis placeat delectus qui vero.</h1>
                         <!--tools-->
-                        <!-- <div class="w-full flex justify-evenly items-center">
+                        <div class="w-full flex justify-evenly items-center">
                             <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"  viewBox="0 0 48 48">
                                 <path fill="#00549d" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#0086d4" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#0075c0" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M31 21H33V27H31zM38 21H40V27H38z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M29 23H35V25H29zM36 23H42V25H36z" clip-rule="evenodd"></path>
                             </svg>
@@ -124,26 +220,15 @@
                 <a href="https://github.com/moelkama/CPP_MODULS" class="bg-gradient-to-r from-[#111629] to-[#1c1b46] hover:from-[#2f3859] hover:to-[#39386f] rounded-xl flex flex-col">
                     <div class="h-5/6 w-11/12 m-auto flex flex-col justify-between">
                         <h1 class="text-2xl font-black tracking-tight text-slate-200">CPP MODULES</h1>
-                        <h1 class="mt-2 text-lg font-bold tracking-tight text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis odio magni quasi. Sint consectetur eligendi suscipit quaerat placeat! Labore perferendis placeat delectus qui vero.</h1> -->
+                        <h1 class="mt-2 text-lg font-bold tracking-tight text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis odio magni quasi. Sint consectetur eligendi suscipit quaerat placeat! Labore perferendis placeat delectus qui vero.</h1>
                         <!--tools-->
-                        <!-- <div class="mx-auto  w-4/6 flex justify-evenly items-center">
+                        <div class="mx-auto  w-4/6 flex justify-evenly items-center">
                             <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"  viewBox="0 0 48 48">
                                 <path fill="#00549d" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#0086d4" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#0075c0" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M31 21H33V27H31zM38 21H40V27H38z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M29 23H35V25H29zM36 23H42V25H36z" clip-rule="evenodd"></path>
                             </svg>
                         </div>
                     </div>
                 </a>
-            </div>
-        </div> -->
-        <!--THIRD PAGE-->
-        <div class="h-screen w-screen bg-black flex justify-center items-center">
-            <div class="h-5/6 w-4/6 grid grid-rows-5 grid-cols-2">
-                <div class="border-r-4 border-b-4 border-white"></div>
-                <div class="border-l-4 border-b-4 row-span-2"></div>
-                <div class="border-r-4 border-b-4 row-span-2"></div>
-                <div class="border-l-4 border-b-4 row-span-2"></div>
-                <div class="border-r-4 row-span-2"></div>
-                <div class="border-l-4 row-span-2"></div>
             </div>
         </div>
     </main>
